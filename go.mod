@@ -1,4 +1,4 @@
-module github.com/myugen/tdd-go-template
+module github.com/myugen/fizzbuzz-kata
 
 go 1.18
 
