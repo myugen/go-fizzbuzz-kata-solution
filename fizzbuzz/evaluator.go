@@ -3,13 +3,29 @@ package fizzbuzz
 import "strconv"
 
 type evaluator struct {
-	value int
+	rules []PrinterRule
 }
 
-func (f evaluator) Print() string {
-	return strconv.Itoa(f.value)
+func (e evaluator) anyRuleIsSatisfied(value int) bool {
+	for _, rule := range e.rules {
+		if rule.Satisfy(value) {
+			return true
+		}
+	}
+	return false
 }
 
-func NewEvaluator(value int) *evaluator {
-	return &evaluator{value: value}
+func (e evaluator) Print(value int) string {
+	if e.anyRuleIsSatisfied(value) {
+		word := ""
+		for _, rule := range e.rules {
+			word += rule.Print(value)
+		}
+		return word
+	}
+	return strconv.Itoa(value)
+}
+
+func NewEvaluator() *evaluator {
+	return &evaluator{rules: []PrinterRule{NewMultipleOfThreePrinterRule(), NewMultipleOfFivePrinterRule()}}
 }
