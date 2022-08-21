@@ -3,7 +3,7 @@ package fizzbuzz_test
 import (
 	"testing"
 
-	"github.com/myugen/fizzbuzz-kata/fizzbuzz"
+	"github.com/myugen/go-fizzbuzz-kata-solution/fizzbuzz"
 	"github.com/stretchr/testify/assert"
 )
 

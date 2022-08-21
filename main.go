@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/myugen/fizzbuzz-kata/fizzbuzz"
+	"github.com/myugen/go-fizzbuzz-kata-solution/fizzbuzz"
 )
 
 func main() {

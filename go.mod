@@ -1,4 +1,4 @@
-module github.com/myugen/fizzbuzz-kata
+module github.com/myugen/go-fizzbuzz-kata-solution
 
 go 1.18
 
